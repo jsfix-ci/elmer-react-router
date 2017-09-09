@@ -8,7 +8,7 @@ import { ElmerRouter } from '../src';
 describe('Router test', () => {
     let ElmerElement = null;
     beforeEach(() => {
-        ElmerElement = mount(<ElmerRouter pages={{}} statePages={{}} />);
+        ElmerElement = mount(<ElmerRouter pages={{}} statePages={{}} debug={false} />);
     });
     it('Should have ElmerRouter class export', () => {
         expect(typeof ElmerRouter).to.eql('function');

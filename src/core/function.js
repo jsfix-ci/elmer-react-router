@@ -48,10 +48,18 @@ export const getDefaultValue = (value, defaultValue) => {
     }
 };
 
-export const isString = (value) => {
-    return getType(value) === '[object String]';
-};
+export const isString = (value) => (getType(value) === '[object String]');
 
-export const getType = (value) => {
-    return Object.prototype.toString.call(value);
-};
+export const getType = (value) => (Object.prototype.toString.call(value));
+
+export const isArray = (value) => (getType(value) === '[object Array]');
+
+export const isNumber = (value) => (getType(value) === '[object Number]');
+
+export const isObject = (value) => (getType(value) === '[object Object]');
+
+export const isDomElement = (value) => (/^(\[object)\s{1}(HTML)[a-zA-Z]*(Element\])$/.test(getType(value)));
+
+export const isNodeList = (value) => (getType(value) === '[object NodeList]');
+
+export const isFunction = (value) => (getType(value) === '[object Function]');
