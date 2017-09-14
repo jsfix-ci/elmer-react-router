@@ -197,7 +197,10 @@ ElmerReactRouter.propTypes = {
         PropTypes.array
     ]).isRequired,
     redirectRouter: PropTypes.bool.isRequired,
-    statePages: PropTypes.object.isRequired,
+    statePages: PropTypes.oneOfType([
+        PropTypes.object,
+        PropTypes.array
+    ]).isRequired,
     children: PropTypes.oneOfType([
         PropTypes.element,
         PropTypes.node
